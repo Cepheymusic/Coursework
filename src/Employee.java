@@ -2,16 +2,16 @@ public class Employee {
     private String fio;
     private int department;
     private float salary;
-    private final int counter; // почему счётчик работает только при final
-    private static int id=1;
+    private final int id;
+    private static int counter=1;
     public Employee(String fio, int department, float salary) {
         this.fio = fio;
         this.department = department;
         this.salary = salary;
-        this.counter = id++;
+        this.id = counter++;
     }
-    public int getCounter() {
-        return this.getCounter();
+    public int getId() {
+        return this.getId();
     }
     public String getFio(){
         return this.fio;
@@ -29,6 +29,6 @@ public class Employee {
         this.salary = salary;
     }
     public String toString() {
-        return "ФИО: " + this.fio + ", отдел: " + this.department + ", зарплата: " + this.salary + " ID: " + counter;
+        return "ФИО: " + this.fio + ", отдел: " + this.department + ", зарплата: " + this.salary + " ID: " + id;
     }
 }
